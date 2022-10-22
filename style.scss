@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+// ===Variables===
+$green: hsl(172, 67%, 45%);
+$green-btns: hsl(172, 42%, 70%);
+$dark-green: hsl(183, 100%, 15%);
+$dark-gray: hsl(186, 14%, 43%);
+$gray: hsl(184, 14%, 56%);
+$bg-color: hsl(185, 41%, 84%);
+$white: hsl(0, 0%, 100%);
+$light-gray: hsl(189, 41%, 97%);
+$orange: rgb(215, 81, 23);
+// ============================
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+    background-color: $bg-color;
+    font-weight: 700;
+    font-family: 'Space Mono', monospace;
+}
+
+main{
+    height: 100vh;
+}
+.splitter{
+    text-align: center;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    color: $dark-gray;
+    letter-spacing: .7rem;
+    margin-bottom: 1rem;
+}
+.tip-window{
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    padding: 30px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.bill{
+    margin-bottom: 30px;
+    width: 100%;
+}
+.title{
+    color: $dark-gray;
+}
+.input-block{
+    position: relative;
+}
+.bill-img{
+    position: absolute;
+    top: 28%;
+    left: 1%;
+}
+.input{
+    display: block;
+    border: none;
+    background-color: $light-gray;
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    outline-color: $green;
+    text-align: right;
+    font-size: 24px;
+    color: $dark-green;
+    font-weight: bold;
+    font-family: inherit;
+    padding-left: 40px;
+    padding-right: 10px;
+}
+.select-tip{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.percent-btns{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+}
+
+.btn:hover{
+    background-color: $green-btns;
+    color: $dark-green;
+}
+.btn{
+    background-color: $dark-green;
+    border: none;
+    color: $light-gray;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 24px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: .1s linear;
+}
+.input-percent{
+    display: flex;
+    flex: 1;
+    outline-color: $green;
+    border: none;
+    background-color: $light-gray;
+    text-align: right;
+    font-weight: inherit;
+    font-size: 24px;
+    width: 100%;
+    padding-left: 40px;
+    color: $dark-green;
+    font-family: 'Space Mono', monospace; 
+    padding-right: 10px; 
+    border-radius: 5px; 
+}
+.number-of-people{
+    margin-bottom: 30px;
+}
+.title-warning{
+    display: flex;
+    justify-content: space-between;
+}
+
+.warning{
+    color: $orange;
+}
+
+.input-orange{
+    outline-color: $orange;
+}
+
+.result{
+    width: 100%;
+    height: auto;
+    background-color: $dark-green;
+    border-radius: 20px;
+    color: $white;
+    padding: 30px;
+}
+.tip{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.tip-result{
+    font-size: 30px;
+    color: $green;
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.total-result{
+    font-size: 30px;
+    color: $green;
+}
+.result-btn:hover{
+    background-color: $green-btns;
+}
+.result-btn{
+    width: 100%;
+    height: 45px;
+    border: none;
+    background-color: $green;
+    color: $dark-green;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Space Mono', monospace;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.right{
+    width: 100%;
+}
+
+.gray{
+    color: $dark-gray;
+}
+.attribution{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.attribution a{
+    color: $dark-green;
+    text-decoration: none;
+}
+footer{
+    display: none;
+}
+
+// Desktop-version
+
+@media(min-width: 992px){
+    .tip-window{
+        width: 800px;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 30px;
+        margin:  100px auto;
+    }
+    .splitter{
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    .right{
+        width: 150%;
+        height: 350px;
+    }
+
+    .percent-btns{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .result{
+        width: 100%;
+        height: 100%;
+        padding-top: 30px;
+    }
+    .input-percent{
+        text-align: right;
+        padding: 0;
+    }
+
+    .total{
+        margin-bottom: 100px;
+    }
+
+    footer{
+        display: block;
+    }
+}
